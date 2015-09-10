@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'HomeController@render');
+
+Route::resource('flogs', 'FlogController');
