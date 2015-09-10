@@ -1,2 +1,49 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: proxima-nova, sans-serif; }
+
+h1 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 800; }
+
+.pure-img {
+  width: 100%; }
+
+.l-box {
+  padding: 1em; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto; }
+
+span.logo {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 800;
+  font-style: italic; }
+
+span.current_flog {
+  float: right;
+  color: #adadad; }
+  span.current_flog span {
+    margin-left: 0.6em;
+    color: black; }
+
+.flog_hero_text p.flog_stats {
+  font-size: 80%;
+  color: #b4b4b4; }
+
+.flog_hero_text h1 {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 100%;
+  line-height: 1;
+  margin-top: 0; }
+  .flog_hero_text h1.flog_name {
+    font-size: 250%;
+    font-style: normal;
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=app.css.map */
