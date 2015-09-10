@@ -1,2 +1,68 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$style-font-stack: brandon-grotesque, sans-serif;
+$primary-font-stack: proxima-nova, sans-serif;
+
+$app-width: 900px;
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: $primary-font-stack;
+}
+
+h1 {
+    font-family: $style-font-stack;
+    font-weight: 800;
+}
+
+.pure-img {
+    width: 100%;
+}
+
+.l-box {
+    padding: 1em;
+}
+
+.container {
+    max-width: $app-width;
+    margin: 0 auto;
+}
+
+span.logo {
+    font-family: $style-font-stack;
+    font-weight: 800;
+    font-style: italic;
+}
+
+span.current_flog {
+    float: right;
+    color: #adadad;
+
+    span {
+        margin-left: 0.6em;
+        color: black;
+    }
+}
+
+.flog_hero_text {
+
+    p.flog_stats {
+        font-size: 80%;
+        color: #b4b4b4;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: 100%;
+        line-height: 1;
+        margin-top: 0;
+
+        &.flog_name {
+            font-size: 250%;
+            font-style: normal;
+            margin-bottom: 0;
+        }
+    }
+}
