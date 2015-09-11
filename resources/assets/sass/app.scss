@@ -7,7 +7,8 @@ html, button, input, select, textarea,
 
 h1 {
   font-family: brandon-grotesque, sans-serif;
-  font-weight: 800; }
+  font-weight: 800;
+  text-transform: uppercase; }
 
 .pure-img {
   width: 100%; }
@@ -41,9 +42,24 @@ span.current_flog {
   font-size: 100%;
   line-height: 1;
   margin-top: 0; }
-  .flog_hero_text h1.flog_name {
-    font-size: 250%;
-    font-style: normal;
-    margin-bottom: 0; }
+
+h1.big {
+font-size: 250%;
+margin-bottom: 0; }
+
+h1.subheading {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 100%;
+    line-height: 1;
+    margin-top: 0;
+}
+
+.prev_flogs {
+
+    h1 {
+        line-height: 1;
+    }
+}
 
 /*# sourceMappingURL=app.css.map */
