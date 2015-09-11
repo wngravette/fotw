@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
         <script src="https://use.typekit.net/hci6zrn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        @yield('additional_head')
     </head>
     <body>
         <div class="container">

@@ -25,9 +25,10 @@ span.logo {
 span.current_flog {
   float: right;
   color: #adadad; }
-  span.current_flog span {
-    margin-left: 0.6em;
-    color: black; }
+
+span.current_flog span {
+  margin-left: 0.6em;
+  color: black; }
 
 .flog_hero_text p.flog_stats {
   font-size: 80%;
@@ -39,9 +40,12 @@ span.current_flog {
   font-size: 100%;
   line-height: 1;
   margin-top: 0; }
-  .flog_hero_text h1.flog_name {
-    font-size: 250%;
-    font-style: normal;
-    margin-bottom: 0; }
+
+.flog_hero_text h1.flog_name {
+  font-size: 250%;
+  font-style: normal;
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=app.css.map */
 
 /*# sourceMappingURL=app.css.map */
