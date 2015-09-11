@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use Storage;
+use App\Flog;
+use Carbon\Carbon;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -37,7 +40,21 @@ class FlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $flog_hash = uniqid(true);
+
+        $input = Request::all();
+        $flog = new Flog($input);
+        $flog->flog_hash = $flog_hash;
+        $flog->published_at = Carbon::now();
+        $flog->save();
+
+        $file = $_FILES['picture'];
+        $file_type = $file['type'];
+        if ($file_type == "image/jpeg")
+        {
+            $file_ext = ".jpg";
+        }
+        Storage::disk('s3')->put($flog_hash . $file_ext, file_get_contents($file['tmp_name'], 'public'));
     }
 
     /**

@@ -6,7 +6,7 @@
     <div class="pure-u-1 pure-u-md-16-24 flog_hero_text">
         <div class="l-box">
             <h1>Make a new flog:</h1>
-            {!! Form::open(['files' => true]) !!}
+            {!! Form::open(['url' => '/flogs', 'files' => true]) !!}
             <dl class="form">
                 <dt>{!! Form::label('name', 'Flog\'s Name', array('class' => '')) !!}</dt>
                 <dd>{!! Form::text('name') !!}</dd>

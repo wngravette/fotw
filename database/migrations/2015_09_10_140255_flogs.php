@@ -14,6 +14,7 @@ class Flogs extends Migration
     {
         Schema::create('flogs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('flog_hash');
             $table->string('name');
             $table->string('reason');
             $table->timestamp('published_at');
