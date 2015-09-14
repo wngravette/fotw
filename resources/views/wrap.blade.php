@@ -11,6 +11,8 @@
         <!--<![endif]-->
         <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
         <link rel="stylesheet" href="{{asset('css/buttons.css')}}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://use.typekit.net/hci6zrn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         @yield('additional_head')
