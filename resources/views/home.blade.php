@@ -7,6 +7,10 @@
             <h1 class="big">{!! $current_flog->name !!}</h1>
             <p class="flog_stats">Flog #{{$current_flog->id}}</p>
             <p>{{$current_flog->reason}}</p>
+            <div class="pure-u-1 hero_vote_wrap">
+                <a id="hero_vote_up" class="pure-button"><i class="fa fa-thumbs-o-up"></i></a>
+                <a id="hero_vote_down" class="pure-button"><i class="fa fa-thumbs-o-down"></i></a>
+            </div>
         </div>
     </div>
     <div class="pure-u-1 pure-u-md-16-24 flog_hero">
