@@ -23,4 +23,22 @@
             <h1 class="subheading">Previous F'sOTW</h1>
         </div>
     </div>
+    <div class="pure-u-14-24" style="height:300px"></div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-10-24 flogspots">
+        <div class="l-box">
+            <h1 class="subheading">FlogSpots</h1>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        // Provide your access token
+        L.mapbox.accessToken = 'pk.eyJ1Ijoid25ncmF2ZXR0ZSIsImEiOiJjaWVqaHdjYjUwMHY5czZtMzBheWJjZGNmIn0.FntqnTZO0rP3KzWBJZraIQ';
+        // Create a map in the div #map
+        L.mapbox.map('map', 'mapbox.streets');
+    });
+    </script>
+    <div class="pure-u-14-24" id="map" style="height:300px"></div>
+</div>
 @endsection
