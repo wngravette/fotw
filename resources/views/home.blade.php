@@ -36,7 +36,9 @@
         // Provide your access token
         L.mapbox.accessToken = 'pk.eyJ1Ijoid25ncmF2ZXR0ZSIsImEiOiJjaWVqaHdjYjUwMHY5czZtMzBheWJjZGNmIn0.FntqnTZO0rP3KzWBJZraIQ';
         // Create a map in the div #map
-        L.mapbox.map('map', 'mapbox.streets');
+        L.mapbox.map('map', 'mapbox.streets', {
+            zoomControl: false
+        });
     });
     </script>
     <div class="pure-u-14-24" id="map" style="height:300px"></div>
