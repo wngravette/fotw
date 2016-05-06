@@ -62,4 +62,19 @@ h1.subheading {
     }
 }
 
+span.comment {
+
+    &.red {
+        color: #e74c3c;
+    }
+
+    &.yellow {
+        color: #f1c40f;
+    }
+
+    &.blue {
+        color: #3498db;
+    }
+}
+
 /*# sourceMappingURL=app.css.map */

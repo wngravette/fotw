@@ -22,6 +22,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://use.typekit.net/hci6zrn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.min.js"></script>
         @yield('additional_head')
     </head>
     <body>

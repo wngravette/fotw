@@ -56,6 +56,15 @@ h1.subheading {
 .prev_flogs h1 {
   line-height: 1; }
 
+span.comment.red {
+  color: #e74c3c; }
+
+span.comment.yellow {
+  color: #f1c40f; }
+
+span.comment.blue {
+  color: #3498db; }
+
 /*# sourceMappingURL=app.css.map */
 
 /*# sourceMappingURL=app.css.map */

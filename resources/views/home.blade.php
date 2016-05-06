@@ -11,18 +11,48 @@
                 <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
                 <a id="hero_vote_down" class="pure-button"><i class="em em-fearful"></i> no fam</a>
             </div>
-            <p class="flog_stats"><span id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams</p>
+            <p class="flog_stats"><span id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams &middot;
+                @if ($flog_number < 0.5)
+                <span class="comment blue">not a flog...?</span>
+                @elseif ($flog_number >= 0.5 && $flog_number < 1.2)
+                <span class="comment yellow">close one</span>
+                @else
+                <span class="comment red">clearly a flog</span>
+                @endif
+            </p>
             <script>
             $(document).ready(function() {
                 $('#hero_vote_up').click(function() {
                     $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'}, function(data) {
                         $('#upvotes_count').html(data.upvotes);
+                        var upvotes_total = data.upvotes;
                     });
                 });
                 $('#hero_vote_down').click(function() {
                     $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '0'}, function(data) {
                         $('#downvotes_count').html(data.downvotes);
                     });
+                });
+                var ctx = $("#myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Flog", "Non-flog"],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [88,5]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }],
+                            height: 200,
+                        }
+                    }
                 });
             });
             </script>
