@@ -5,7 +5,12 @@
         <div class="l-box">
             <h1 class="subheading">Get a load of this flog:</h1>
             <h1 class="big">{!! $current_flog->name !!}</h1>
-            <p class="flog_stats">Flog #{{$current_flog->formatted_id}}</p>
+            <p class="flog_stats">Flog #{{$current_flog->formatted_id}}
+                @if ($archived == true)
+                &middot; 
+                <span class="comment red">from the archive<span>
+                @endif
+            </p>
             <p>{!!$current_flog->reason!!}</p>
             <div class="pure-u-1 hero_vote_wrap">
                 <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
@@ -90,4 +95,10 @@
     <div class="pure-u-14-24" id="map" style="height:300px"></div>
 </div>
 -->
+<div class="pure-g footer">
+    <div class="pure-u-1">
+        <h1 class="subheading">PREVIOUS FLOGS <i class="em em-arrow_right"></i></h1>
+        <h1 class="subheading">FlogAPI <i class="em em-arrow_right"></i></h1>
+    </div>
+</div>
 @endsection

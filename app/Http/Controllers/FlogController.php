@@ -19,7 +19,7 @@ class FlogController extends Controller
      */
     public function index()
     {
-        return "hi";
+        return Flog::all();
     }
 
     /**
