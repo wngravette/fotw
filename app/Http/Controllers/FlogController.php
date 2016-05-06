@@ -77,6 +77,8 @@ class FlogController extends Controller
         } else {
             if ($upvotes !== 0 && $downvotes == 0) {
                 $flog_number = 2;
+            } elseif ($upvotes == 0 && $downvotes !== 0) {
+                $flog_number = 0;
             }
             else {
                 $flog_number = 1;
