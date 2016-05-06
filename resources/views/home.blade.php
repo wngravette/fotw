@@ -7,7 +7,7 @@
             <h1 class="big">{!! $current_flog->name !!}</h1>
             <p class="flog_stats">Flog #{{$current_flog->formatted_id}}
                 @if ($archived == true)
-                &middot; 
+                &middot;
                 <span class="comment red">from the archive<span>
                 @endif
             </p>
@@ -94,11 +94,11 @@
     </script>
     <div class="pure-u-14-24" id="map" style="height:300px"></div>
 </div>
--->
 <div class="pure-g footer">
     <div class="pure-u-1">
         <h1 class="subheading">PREVIOUS FLOGS <i class="em em-arrow_right"></i></h1>
         <h1 class="subheading">FlogAPI <i class="em em-arrow_right"></i></h1>
     </div>
 </div>
+-->
 @endsection
