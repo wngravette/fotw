@@ -8,7 +8,7 @@
             <p class="flog_stats">Flog #{{$current_flog->formatted_id}}
                 @if ($archived == true)
                 &middot;
-                <span class="comment red">from the archive<span>
+                <span class="comment blue">from the archive<span>
                 @endif
             </p>
             <p>{!!$current_flog->reason!!}</p>
