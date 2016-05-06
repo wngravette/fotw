@@ -7,17 +7,22 @@
             <h1 class="big">{!! $current_flog->name !!}</h1>
             <p class="flog_stats">Flog #{{$current_flog->formatted_id}}</p>
             <p>{{$current_flog->reason}}</p>
+            <p class="flog_stats"><span id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams</p>
             <div class="pure-u-1 hero_vote_wrap">
                 <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
-                <a id="hero_vote_down" class="pure-button"><i class="em em-no_mouth"></i> no fam</a>
+                <a id="hero_vote_down" class="pure-button"><i class="em em-fearful"></i> no fam</a>
             </div>
             <script>
             $(document).ready(function() {
                 $('#hero_vote_up').click(function() {
-                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'});
+                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'}, function(data) {
+                        $('#upvotes_count').html(data.upvotes);
+                    });
                 });
                 $('#hero_vote_down').click(function() {
-                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '0'});
+                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '0'}, function(data) {
+                        $('#downvotes_count').html(data.downvotes);
+                    });
                 });
             });
             </script>

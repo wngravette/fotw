@@ -40,12 +40,16 @@ class VoteController extends Controller
      */
     public function store(Request $request, $flog_id)
     {
+        $flog = Flog::findOrFail($flog_id);
         $vote = new Vote;
         $vote->flog_id = $flog_id;
         $vote->vote_direction = $request->vote_direction;
         $vote->save();
 
-        return redirect('/');
+        $upvotes = $flog->votes->where('vote_direction', 1)->count();
+        $downvotes = $flog->votes->where('vote_direction', 0)->count();
+
+        return response()->json(['upvotes' => $upvotes, 'downvotes' => $downvotes]);
     }
 
     /**
