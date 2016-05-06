@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flog of the Week</title>
+        <title>{{$current_flog->name}} &#8212; Flog of the Week</title>
+        <meta property="og:site_name" content="Flog of the Week"/>
+        <meta property="og:title" content="{{$current_flog->name}}: What a flog."/>
         <!--[if lte IE 8]>
           <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
         <![endif]-->
