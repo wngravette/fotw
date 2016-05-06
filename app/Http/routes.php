@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@render');
 
+Route::get('archive', 'FlogController@index');
 Route::get('archive/{flog}', 'FlogController@show');
 
 Route::resource('flogs', 'FlogController');

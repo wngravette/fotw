@@ -23,6 +23,7 @@ class HomeController extends Controller
             $currentFlog = Flog::findOrFail($archived_flog->state_value);
             $archived = true;
         }
+        $flog_featured = true;
         $currentFlog->formatted_id = str_pad($currentFlog->id, 3, '0', STR_PAD_LEFT);
         $current_week = Carbon::now()->startOfWeek()->toFormattedDateString();
         $upvotes = $currentFlog->votes->where('vote_direction', 1)->count();
@@ -45,7 +46,8 @@ class HomeController extends Controller
             'upvotes' => $upvotes,
             'downvotes' => $downvotes,
             'flog_number' => $flog_number,
-            'archived' => $archived
+            'archived' => $archived,
+            'flog_featured' => $flog_featured
         ]);
     }
 }

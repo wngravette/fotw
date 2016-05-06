@@ -19,7 +19,17 @@ class FlogController extends Controller
      */
     public function index()
     {
-        return Flog::all();
+        $flogs = Flog::orderBy('id', 'desc')->get();
+        $flog_featured = false;
+
+        foreach ($flogs as $flog) {
+            $flog->formatted_id = str_pad($flog->id, 3, '0', STR_PAD_LEFT);
+        }
+
+        return view('archive', [
+            'flogs' => $flogs,
+            'flog_featured' => $flog_featured
+        ]);
     }
 
     /**
@@ -68,6 +78,7 @@ class FlogController extends Controller
         $flog = Flog::findOrFail($id);
 
         $archived = true;
+        $flog_featured = true;
         $flog->formatted_id = str_pad($flog->id, 3, '0', STR_PAD_LEFT);
         $upvotes = $flog->votes->where('vote_direction', 1)->count();
         $downvotes = $flog->votes->where('vote_direction', 0)->count();
@@ -90,7 +101,8 @@ class FlogController extends Controller
             'upvotes' => $upvotes,
             'downvotes' => $downvotes,
             'flog_number' => $flog_number,
-            'archived' => $archived
+            'archived' => $archived,
+            'flog_featured' => $flog_featured
         ]);
     }
 
