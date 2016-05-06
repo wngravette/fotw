@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@render');
 
+Route::get('archive/{flog}', 'FlogController@show');
+
 Route::resource('flogs', 'FlogController');
 
 Route::group(['prefix' => 'api'], function() {

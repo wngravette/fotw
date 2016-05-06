@@ -65,7 +65,31 @@ class FlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $flog = Flog::findOrFail($id);
+
+        $archived = true;
+        $flog->formatted_id = str_pad($flog->id, 3, '0', STR_PAD_LEFT);
+        $upvotes = $flog->votes->where('vote_direction', 1)->count();
+        $downvotes = $flog->votes->where('vote_direction', 0)->count();
+
+        if ($upvotes !== 0 && $downvotes !== 0) {
+            $flog_number = $upvotes/$downvotes;
+        } else {
+            if ($upvotes !== 0 && $downvotes == 0) {
+                $flog_number = 2;
+            }
+            else {
+                $flog_number = 1;
+            }
+        }
+
+        return view('single', [
+            'current_flog' => $flog,
+            'upvotes' => $upvotes,
+            'downvotes' => $downvotes,
+            'flog_number' => $flog_number,
+            'archived' => $archived
+        ]);
     }
 
     /**
