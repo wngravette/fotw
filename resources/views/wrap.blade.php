@@ -11,6 +11,7 @@
         <!--<![endif]-->
         <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
         <link rel="stylesheet" href="{{asset('css/buttons.css')}}"/>
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
@@ -23,7 +24,7 @@
         <div class="container">
             <div class="pure-u-1">
                 <div class="l-box">
-                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">Week of: <span>7th September</span></span></span></p>
+                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">Week of: <span>{{$current_week}}</span></span></span></p>
                 </div>
             </div>
             @yield('content')

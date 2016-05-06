@@ -5,18 +5,29 @@
         <div class="l-box">
             <h1 class="subheading">Get a load of this flog:</h1>
             <h1 class="big">{!! $current_flog->name !!}</h1>
-            <p class="flog_stats">Flog #{{$current_flog->id}}</p>
+            <p class="flog_stats">Flog #{{$current_flog->formatted_id}}</p>
             <p>{{$current_flog->reason}}</p>
             <div class="pure-u-1 hero_vote_wrap">
-                <a id="hero_vote_up" class="pure-button"><i class="fa fa-thumbs-o-up"></i></a>
-                <a id="hero_vote_down" class="pure-button"><i class="fa fa-thumbs-o-down"></i></a>
+                <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
+                <a id="hero_vote_down" class="pure-button"><i class="em em-no_mouth"></i> no fam</a>
             </div>
+            <script>
+            $(document).ready(function() {
+                $('#hero_vote_up').click(function() {
+                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'});
+                });
+                $('#hero_vote_down').click(function() {
+                    $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '0'});
+                });
+            });
+            </script>
         </div>
     </div>
     <div class="pure-u-1 pure-u-md-16-24 flog_hero">
         <img class="pure-img" src="https://s3-ap-southeast-2.amazonaws.com/fotw/{{$current_flog->flog_hash}}.jpg"/>
     </div>
 </div>
+<!--
 <div class="pure-g">
     <div class="pure-u-10-24 prev_flogs">
         <div class="l-box">
@@ -43,4 +54,5 @@
     </script>
     <div class="pure-u-14-24" id="map" style="height:300px"></div>
 </div>
+-->
 @endsection

@@ -14,3 +14,7 @@
 Route::get('/', 'HomeController@render');
 
 Route::resource('flogs', 'FlogController');
+
+Route::group(['prefix' => 'api'], function() {
+    Route::post('flogs/{flog}/vote', 'VoteController@store');
+});
