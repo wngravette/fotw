@@ -19,8 +19,10 @@ class HomeController extends Controller
         $current_week = Carbon::now()->startOfWeek()->toFormattedDateString();
         $upvotes = $currentFlog->votes->where('vote_direction', 1)->count();
         $downvotes = $currentFlog->votes->where('vote_direction', 0)->count();
-
-        $flog_number = $upvotes/$downvotes;
+        
+        if ($upvotes !== 0 && $downvotes !== 0) {
+            $flog_number = $upvotes/$downvotes;
+        }
 
         return view('home', [
             'current_flog' => $currentFlog,
