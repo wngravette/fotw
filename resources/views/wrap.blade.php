@@ -8,7 +8,7 @@
           <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
-          <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css&pure/0.6.0/buttons-min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/pure@0.6.0(pure-min.css+base-min.css+grids-responsive-min.css+grids-min.css+buttons-min.css)">
         <!--<![endif]-->
         <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
         <link rel="stylesheet" href="{{asset('css/buttons.css')}}"/>
