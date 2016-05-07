@@ -32,7 +32,7 @@
         <div class="container">
             <div class="pure-u-1">
                 <div class="l-box">
-                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog"><i class="em em-fist"></i></span></span></p>
+                    <p><span class="logo">ETERNALLY FLOG</span> <span class="current_flog"><i class="em em-fist"></i></span></span></p>
                 </div>
             </div>
             @yield('content')
