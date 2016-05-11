@@ -39,7 +39,11 @@ class FlogController extends Controller
      */
     public function create()
     {
-        return view('flogs.create');
+        $flog_featured = false;
+        
+        return view('flogs.create', [
+            'flog_featured' => $flog_featured
+        ]);
     }
 
     /**
