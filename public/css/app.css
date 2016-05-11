@@ -25,7 +25,12 @@ span.logo {
 
 span.current_flog {
   float: right;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 800;
+  font-style: italic;
   color: #adadad; }
+  span.current_flog i {
+    vertical-align: -6px; }
 
 span.current_flog span {
   margin-left: 0.6em;
