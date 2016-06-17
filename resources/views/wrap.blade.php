@@ -33,14 +33,14 @@
             <div class="pure-u-1">
                 <div class="l-box">
                     <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">
-                    #
+                    THE
                     <script type="text/javascript">
                        var message = "AUSVOTES";
                        var colors = new Array("#2ecc71","#f1c40f");
                        for (var i = 0; i < message.length; i++)
                           document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
-                    EDITION
+                    EDITIONS
                     </span></span></p>
                 </div>
             </div>
