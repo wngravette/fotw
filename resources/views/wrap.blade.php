@@ -32,7 +32,7 @@
         <div class="container">
             <div class="pure-u-1">
                 <div class="l-box">
-                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog"><i class="em em-birthday"></i> EDITION</span></span></p>
+                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">#ausvotes EDITION</span></span></p>
                 </div>
             </div>
             @yield('content')
