@@ -6,6 +6,7 @@ use Request;
 use Storage;
 use App\Flog;
 use Carbon\Carbon;
+use DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -142,5 +143,10 @@ class FlogController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function resetpins()
+    {
+        DB::table('states')->where('state_name', 'current_flog')->update(['current_flog' => 0]);
     }
 }
