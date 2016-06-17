@@ -147,6 +147,6 @@ class FlogController extends Controller
     
     public function resetpins()
     {
-        DB::table('states')->where('state_name', 'current_flog')->update(['current_flog' => 0]);
+        DB::table('states')->where('state_name', 'current_flog')->update(['state_value' => 0]);
     }
 }
