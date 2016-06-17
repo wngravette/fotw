@@ -37,7 +37,7 @@
                        var message = "AUSVOTES";
                        var colors = new Array("#2ecc71","#f1c40f"); // red, green, blue
                        for (var i = 0; i < message.length; i++)
-                          document.write("<span style=\"color:" + colors[(i % colors.length)] + ";\">" + message[i] + "</span>");
+                          document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
                     EDITION
                     </span></span></p>
