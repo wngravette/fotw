@@ -32,7 +32,15 @@
         <div class="container">
             <div class="pure-u-1">
                 <div class="l-box">
-                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">#ausvotes EDITION</span></span></p>
+                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">#
+                    <script type="text/javascript">
+                       var message = "AUSVOTES";
+                       var colors = new Array("#2ecc71","#f1c40f"); // red, green, blue
+                       for (var i = 0; i < message.length; i++)
+                          document.write("<span style=\"color:" + colors[(i % colors.length)] + ";\">" + message[i] + "</span>");
+                    </script>
+                    EDITION
+                    </span></span></p>
                 </div>
             </div>
             @yield('content')
