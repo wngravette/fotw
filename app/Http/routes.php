@@ -20,4 +20,5 @@ Route::resource('flogs', 'FlogController');
 
 Route::group(['prefix' => 'api'], function() {
     Route::post('flogs/{flog}/vote', 'VoteController@store');
+    Route::get('reset-pins', 'FlogController@resetpins');
 });
