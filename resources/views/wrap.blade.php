@@ -33,7 +33,7 @@
             <div class="pure-u-1">
                 <div class="l-box">
                     <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">
-                    THE
+                    #
                     <script type="text/javascript">
                        var message = "AUSVOTES";
                        var colors = new Array("#2ecc71","#f1c40f");
