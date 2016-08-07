@@ -40,7 +40,7 @@
                        for (var i = 0; i < message.length; i++)
                           document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
-                    EDITIONS
+                    EDITION
                     </span></span></p>
                 </div>
             </div>
