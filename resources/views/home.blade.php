@@ -16,7 +16,7 @@
                 <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
                 <a id="hero_vote_down" class="pure-button"><i class="em em-fearful"></i> no fam</a>
             </div>
-            <p class="flog_stats"><span id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams &middot;
+            <p class="flog_stats"><span class="vote_count" id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span class="vote_count" id="downvotes_count">{{$downvotes}}</span> no fams &middot;
                 @if ($flog_number < 0.5)
                 <span class="comment blue">not a flog...?</span>
                 @elseif ($flog_number >= 0.5 && $flog_number < 1.2)
@@ -27,6 +27,7 @@
             </p>
             <script>
             $(document).ready(function() {
+                $('span.vote_count').number( true )
                 $('#hero_vote_up').click(function() {
                     $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'}, function(data) {
                         $('#upvotes_count').html(data.upvotes);

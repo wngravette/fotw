@@ -26,6 +26,7 @@
         <script src="https://use.typekit.net/hci6zrn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.min.js"></script>
+        <script src="{{asset('js/jquery.number.min.js')}}"></script>
         <script>
         (function($) {
           $.fn.nodoubletapzoom = function() {
