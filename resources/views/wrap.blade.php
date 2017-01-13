@@ -36,7 +36,7 @@
                     #
                     <script type="text/javascript">
                        var message = "BATTY BIRTHDAY";
-                       var colors = new Array("##1abc9c","#f1c40f", "#3498db");
+                       var colors = new Array("##1abc9c", "#3498db");
                        for (var i = 0; i < message.length; i++)
                           document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
