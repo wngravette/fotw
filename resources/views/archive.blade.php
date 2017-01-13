@@ -10,7 +10,7 @@
     <div class="pure-u-1">
         <div class="l-box">
             <p class="flog_stats">Flog #{{$flog->formatted_id}}</p>
-            <h1 class="subheading">{{$flog->name}}</h1>
+            <a href="/archive/{{$flog->id}}"><h1 class="subheading">{{$flog->name}}</h1></a>
         </div>
     </div>
     @endforeach
