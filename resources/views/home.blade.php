@@ -27,11 +27,11 @@
             </p>
             <script>
             $(document).ready(function() {
-                $('span.vote_count').number( true )
                 $('#hero_vote_up').click(function() {
                     $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '1'}, function(data) {
                         $('#upvotes_count').html(data.upvotes);
                         $('#downvotes_count').html(data.downvotes);
+                        $('span.vote_count').number( true );
                         var upvotes_total = data.upvotes;
                     });
                 });
@@ -39,6 +39,7 @@
                     $.post("/api/flogs/{{$current_flog->id}}/vote", {_token: '{{csrf_token()}}', vote_direction: '0'}, function(data) {
                         $('#upvotes_count').html(data.upvotes);
                         $('#downvotes_count').html(data.downvotes);
+                        $('span.vote_count').number( true );
                     });
                 });
                 var ctx = $("#myChart");
