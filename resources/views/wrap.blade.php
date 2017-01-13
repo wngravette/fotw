@@ -43,6 +43,7 @@
               });
           };
         })(jQuery);
+        $("body").nodoubletapzoom();
         </script>
         @yield('additional_head')
     </head>
