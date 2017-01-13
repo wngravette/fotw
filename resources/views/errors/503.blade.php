@@ -39,8 +39,17 @@
                 margin-bottom: 40px;
             }
 
+            .sub {
+                font-family: proxima-nova, sans-serif;
+                font-size: 12px;
+                margin-top: 20px;
+                font-style: normal;
+                font-weight: 300;
+            }
+
             i.em {
                 vertical-align: -8px;
+                margin-right: 4px;
             }
         </style>
     </head>
@@ -48,7 +57,8 @@
         <div class="container">
             <div class="content">
                 <div class="title">FOTW <i class="em em-astonished"></i><i class="em em-ambulance"></i><i class="em em-pray"></i></div>
-                <div class="title">we're working on it</div>
+                <div class="title">we're down but we're working on it*</div>
+                <div class="sub">* we're probably not working on it but tbh who cares</div>
             </div>
         </div>
     </body>
