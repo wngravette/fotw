@@ -3,7 +3,7 @@
 <div class="pure-g">
     <div class="pure-u-md-8-24 pure-u-1 flog_hero_text">
         <div class="l-box">
-            <h1 class="subheading">Get a load of this flog:</h1>
+            <h1 class="subheading">{!! $intros[array_rand($intros)]!!}:</h1>
             <h1 class="big">{!! $current_flog->name !!}</h1>
             <p class="flog_stats">Flog #{{$current_flog->formatted_id}}
                 @if ($archived == true)

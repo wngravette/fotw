@@ -15,6 +15,7 @@ class HomeController extends Controller
 {
     public function render()
     {
+        $intros = ["get a load of this flog", "what an absolute flog", "gee whillakers heres a flog if ive ever seen one", "omfg <i class=\"em em-rotating_light\"></i> major flog alert <i class=\"em em-rotating_light\"></i>", "our biggest, baddest flog yet"];
         $archived_flog = DB::table('states')->where('state_name', 'current_flog')->first();
         if ($archived_flog->state_value == 0) {
             $currentFlog = Flog::orderBy('id', 'desc')->first();
@@ -47,7 +48,8 @@ class HomeController extends Controller
             'downvotes' => $downvotes,
             'flog_number' => $flog_number,
             'archived' => $archived,
-            'flog_featured' => $flog_featured
+            'flog_featured' => $flog_featured,
+            'intros' => $intros
         ]);
     }
 }
