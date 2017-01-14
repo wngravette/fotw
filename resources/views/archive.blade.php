@@ -8,10 +8,10 @@
     </div>
     <div class="pure-g">
     @foreach ($flogs as $flog)
-        <div class="pure-u-4-24">
+        <div class="pure-u-8-24">
             <img class="pure-img" src="https://s3-ap-southeast-2.amazonaws.com/fotw/{{$flog->flog_hash}}.jpg"/>
         </div>
-        <div class="pure-u-20-24">
+        <div class="pure-u-16-24">
             <div class="l-box">
                 <p class="flog_stats">Flog #{{$flog->formatted_id}}</p>
                 <a href="/archive/{{$flog->id}}"><h1 class="subheading">{{$flog->name}}</h1></a>
