@@ -6,14 +6,19 @@
             <h1 class="big">The FOTW Archives:</h1>
         </div>
     </div>
+    <div class="pure-g">
     @foreach ($flogs as $flog)
-    <div class="pure-u-1">
-        <div class="l-box">
-            <p class="flog_stats">Flog #{{$flog->formatted_id}}</p>
-            <a href="/archive/{{$flog->id}}"><h1 class="subheading">{{$flog->name}}</h1></a>
+        <div class="pure-u-4-24">
+            <img class="pure-img" src="https://s3-ap-southeast-2.amazonaws.com/fotw/{{$flog->flog_hash}}.jpg"/>
         </div>
-    </div>
+        <div class="pure-u-20-24">
+            <div class="l-box">
+                <p class="flog_stats">Flog #{{$flog->formatted_id}}</p>
+                <a href="/archive/{{$flog->id}}"><h1 class="subheading">{{$flog->name}}</h1></a>
+            </div>
+        </div>
     @endforeach
+    </div>
 </div>
 <!--
 <div class="pure-g">
