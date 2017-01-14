@@ -53,14 +53,14 @@
             <div class="pure-u-1">
                 <div class="l-box">
                     <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">
-                    <i class="em em-birthday"></i>
+                    
                     <script type="text/javascript">
                        var message = "BATTY";
                        var colors = new Array("#1abc9c","#f1c40f", "#3498db");
                        for (var i = 0; i < message.length; i++)
                           document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
-                    EDITION
+                    <i class="em em-birthday"></i> EDITION
                     </span></span></p>
                 </div>
             </div>
