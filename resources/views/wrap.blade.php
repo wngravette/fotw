@@ -52,8 +52,7 @@
         <div class="container">
             <div class="pure-u-1">
                 <div class="l-box">
-                    <p><span class="logo">FLOG OF THE WEEK</span> <span class="current_flog">
-
+                    <p><a href="/"><span class="logo">FLOG OF THE WEEK</span></a><span class="current_flog">
                     <script type="text/javascript">
                        var message = "BATTY";
                        var colors = new Array("#1abc9c","#f1c40f", "#3498db");
