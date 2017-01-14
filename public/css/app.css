@@ -75,7 +75,16 @@ span.comment.blue {
   color: #3498db; }
 
 .footer {
-  margin-top: 5em; }
+  background-color: #5d5d5d; }
+  .footer span.logo {
+    color: white;
+    vertical-align: -1px; }
+  .footer p {
+    color: #bdbdbd; }
+    .footer p:first-child {
+      color: white; }
+    .footer p a:link {
+      border-bottom: 2px solid white; }
 
 /*# sourceMappingURL=app.css.map */
 

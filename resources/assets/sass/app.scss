@@ -93,7 +93,25 @@ span.comment {
 }
 
 .footer {
-    margin-top: 5em;
+    background-color: #5d5d5d;
+
+    span.logo {
+        color: white;
+        vertical-align: -1px;
+    }
+    p {
+        color: #bdbdbd;
+
+        &:first-child {
+            color: white;
+        }
+
+        a {
+            &:link {
+                border-bottom: 2px solid white;
+            }
+        }
+    }
 }
 
 /*# sourceMappingURL=app.css.map */

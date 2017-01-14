@@ -106,3 +106,20 @@
 </div>
 -->
 @endsection
+@section('footer')
+<div class="pure-g">
+    <div class="pure-u-1 footer">
+        <div class="l-box">
+            <p>
+                <span class="logo">FOTW</span> &middot; made by the flogmaster general <a href="twitter">willy n g</a>
+            </p>
+            <p>
+                <a href="/archive">see the archives</a>
+            </p>
+            <p>
+                <a href="/">submit a flog</a>
+            </p>
+        </div>
+    </div>
+</div>
+@endsection
