@@ -17,7 +17,13 @@
                 <a id="hero_vote_up" class="pure-button"><i class="em em-fire"></i> lol tru</a>
                 <a id="hero_vote_down" class="pure-button"><i class="em em-fearful"></i> no fam</a>
             </div>
-            <p class="flog_stats"><span id="upvotes_count">{{$upvotes}}</span> lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams &middot;
+            <p class="flog_stats">
+                @if ($current_flog->name == "David Bulman")
+                <span id="upvotes_count">11,291,780</span>
+                @else
+                <span id="upvotes_count">{{$upvotes}}</span>
+                @endif
+                 lol trus &middot; <span id="downvotes_count">{{$downvotes}}</span> no fams &middot;
                 @if ($flog_number < 0.5)
                 <span class="comment blue">not a flog...?</span>
                 @elseif ($flog_number >= 0.5 && $flog_number < 1.2)
