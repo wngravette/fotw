@@ -54,12 +54,12 @@
                 <div class="l-box">
                     <p><a href="/"><span class="logo">FLOG OF THE WEEK</span></a><span class="current_flog">
                     <script type="text/javascript">
-                       var message = "BATTY";
-                       var colors = new Array("#1abc9c","#f1c40f", "#3498db");
+                       var message = "AUSOPEN";
+                       var colors = new Array("#f1c40f","#2ecc71");
                        for (var i = 0; i < message.length; i++)
                           document.write("<span style=\"color:" + colors[(i % colors.length)] + ";margin:0;\">" + message[i] + "</span>");
                     </script>
-                    <i class="em em-birthday"></i> EDITION
+                    <i class="em em-tennis"></i> EDITION
                     </span></span></p>
                 </div>
             </div>
