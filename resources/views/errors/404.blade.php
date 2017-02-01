@@ -56,9 +56,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">FOTW <i class="em em-astonished"></i><i class="em em-ambulance"></i><i class="em em-pray"></i></div>
-                <div class="title">we're down but we're working on it*</div>
-                <div class="sub">* we're probably not working on it but tbh who cares</div>
+                <div class="title">FOTW <i class="em em-confused"></i></div>
+                <div class="title">nah</div>
+                <div class="sub">somethings probably broken but unfortunately nobody cares</div>
             </div>
         </div>
     </body>
