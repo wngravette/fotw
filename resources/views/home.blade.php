@@ -18,9 +18,9 @@
             </div>
             <p class="flog_stats"><span class="vote_count" id="upvotes_count">{{number_format($upvotes)}}</span> lol trus &middot; <span class="vote_count" id="downvotes_count">{{number_format($downvotes)}}</span> no fams &middot;
                 @if ($flog_number < 0.5)
-                <span class="comment blue">not a flog...?</span>
+                <span class="comment blue">flog status in doubt</span>
                 @elseif ($flog_number >= 0.5 && $flog_number < 1.2)
-                <span class="comment yellow">close one</span>
+                <span class="comment yellow">classic mixup</span>
                 @else
                 <span class="comment red">clearly a flog</span>
                 @endif
